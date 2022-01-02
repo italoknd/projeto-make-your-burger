@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p><em>Created by: <a href="#">Italo Pedroza</a> in 2022.</em></p>
+    <p>Created by <a href="#">Italo Pedroza</a> &copy; 2022.</p>
   </div>
 </template>
 
@@ -11,5 +11,23 @@
 </script>
 
 <style scoped>
-  
+  div{
+    background: rgba(0, 0, 0, 0.856);
+    border-top: 4px solid rgba(0, 0, 0, 0.904);
+    height: 225px;
+    color: #fcba03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  a:visited{
+    color: white;
+  }
 </style>
