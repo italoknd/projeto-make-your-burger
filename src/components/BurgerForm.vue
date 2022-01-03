@@ -5,52 +5,51 @@
 
     <div>
       <form id="burger-form" @click="vazio_ainda">
-        <div class="input-container">
-          <label for="name">Nome do cliente:</label>
-          <input type="text" id="name" name="name" v-model="name" placeholder="Digite seu nome">      
-        </div>
-
-        <div class="input-container">
-          <label for="bread">Escolha o pão:</label>
-          <select name="bread" id="bread" v-model="bread">
-            <option value="">Selecione seu pão:</option>
-            <option value="integral">Integral</option>
-          </select>   
-        </div>
-
-        <div class="input-container">
-          <label for="meat">Escolha a carne do seu burger:</label>
-          <select name="meat" id="meat" v-model="meat">
-            <option value="">Selecione o tipo de carne:</option>
-            <option value="maminha">Maminha</option>
-          </select>   
-        </div>
-
-        <div id="optionals" class="input-container">
-          <label id="optionals-title" for="optionals">Selecione as opcionais:</label>
-          <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
+        <div class="form">
+          <div class="input-container">
+            <label for="name">Nome do cliente:</label>
+            <input type="text" id="name" name="name" v-model="name" placeholder="Digite seu nome">
           </div>
-                    <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
+          <div class="input-container">
+            <label for="bread">Escolha o pão:</label>
+            <select name="bread" id="bread" v-model="bread">
+              <option value="">Selecione seu pão:</option>
+              <option value="integral">Integral</option>
+            </select>
           </div>
-                    <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
+          <div class="input-container">
+            <label for="meat">Escolha a carne do seu burger:</label>
+            <select name="meat" id="meat" v-model="meat">
+              <option value="">Selecione o tipo de carne:</option>
+              <option value="maminha">Maminha</option>
+            </select>
           </div>
-                    <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
-          </div>
-                    <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
-          </div>
-                    <div id="checkbox-container">
-            <input type="checkbox" name="salame" id="optionals" v-model="optionals">
-            <span>Salame</span> 
+          <div id="optionals" class="input-container">
+            <label id="optionals-title" for="optionals">Selecione as opcionais:</label>
+            <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
+                      <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
+                      <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
+                      <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
+                      <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
+                      <div id="checkbox-container">
+              <input type="checkbox" name="salame" id="optionals" v-model="optionals">
+              <span>Salame</span>
+            </div>
           </div>
         </div>
 
@@ -75,6 +74,10 @@ export default {
 </script>
 
 <style scoped>
+  .form{
+    margin: 0px 50px;
+  }
+
   #burger-form{
     max-width: 400px;
     margin: 0 auto;
@@ -134,7 +137,6 @@ export default {
     border: 2px solid #252525;
     cursor: pointer;
     transition: .5s;
-    margin-bottom: 30px;
     margin: auto;
   }
 
