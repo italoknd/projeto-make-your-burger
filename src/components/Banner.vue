@@ -25,8 +25,10 @@ export default {
 
   #main-banner h1{
     background: #252525;
-    color: white;
+    color: whitesmoke;
     font-size: 60px;
     padding: 20px;
+    border-bottom: 3px solid #FCAC19;
+    border-right: 3px solid #FCAC19
   }
 </style>
