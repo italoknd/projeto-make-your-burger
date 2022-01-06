@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>Monte seu burger:</h1>
-    <p>Pedido realizado com sucesso [msg futura]</p>
+    <p style="text-align: center; background-color: orange;">Pedido realizado com sucesso [msg futura]</p>
 
     <div>
-      <form id="burger-form" @click="vazio_ainda">
+      <form id="burger-form" @submit="createBurger">
         <div class="form">
           <div class="input-container">
             <label for="name">Nome do cliente:</label>
@@ -61,7 +61,6 @@ export default {
      pao: null,
      carne: null,
      opcionais: [],
-     status: "Solicitado",
      msg: null
     }
   },
@@ -74,6 +73,30 @@ export default {
       this.paes = data.paes;
       this.carnes = data.carnes;
       this.opcionais_data = data.opcionais;
+    },
+
+    async createBurger(e){
+      
+      e.preventDefault();
+      
+      const data = {
+        nome: this.nome,
+        carne: this.carne,
+        pao: this.pao,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado"
+      }
+
+      const dataJson = JSON.stringify(data) //convertendo o objeto data em texto (JSON p/ txt)
+
+      const req = await fetch('http://localhost:3000/burgers',{
+        method: 'POST',
+        headers:{"Content-Type": "application/json"}, //comunicação com o JSON
+        body: dataJson //enviando dados do dataJson como txt
+      })
+
+      const res = await req.json()
+      console.log(res);
     }
   },
   mounted(){

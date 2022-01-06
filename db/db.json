@@ -78,6 +78,13 @@
     }
   ],
   "burgers": [
-    
+    {
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opicionais": [],
+      "status": "Solicitado",
+      "id": 1
+    }
   ]
 }
