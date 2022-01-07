@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Monte seu burger:</h1>
-    <p style="text-align: center; background-color: orange;">Pedido realizado com sucesso [msg futura]</p>
+    <PedidoConcluido :msg="msgPedido" v-show="msgPedido"/>
 
     <div>
       <form id="burger-form" @submit="createBurger">
@@ -47,10 +47,17 @@
 </template>
 
 <script>
+import PedidoConcluido from './PedidoConcluido.vue'
+
 export default {
   name: 'BurgerForm',
+  components:{
+    PedidoConcluido
+  },
   data() {
     return {
+    msgPedido: "",
+
     //dados que vem do servidor para a aplicação
      paes: null,
      carnes: null,
@@ -96,7 +103,15 @@ export default {
       })
 
       const res = await req.json()
-      console.log(res);
+
+      //colocar msg no sistema
+      this.msgPedido = `Pedido Nº ${res.id} realizado com sucesso!`
+
+      //limpar msg pós pedido feito
+      setTimeout(() => {
+        this.msgPedido = ""
+      }, 10000);
+
     }
   },
   mounted(){
