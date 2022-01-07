@@ -8,11 +8,11 @@
         <div class="form">
           <div class="input-container">
             <label for="name">Nome do cliente:</label>
-            <input type="text" id="name" name="name" v-model="name" placeholder="Digite seu nome">
+            <input type="text" id="name" name="name" v-model="nome" placeholder="Digite seu nome">
           </div>
           <div class="input-container">
             <label for="bread">Escolha o pão:</label>
-            <select name="bread" id="bread" v-model="bread">
+            <select name="bread" id="bread" v-model="pao">
               <option value="">Selecione seu pão:</option>
               <option v-for="pao in paes" :key='pao.id' :value="pao.tipo">
                 {{pao.tipo}}
@@ -21,7 +21,7 @@
           </div>
           <div class="input-container">
             <label for="meat">Escolha a carne do seu burger:</label>
-            <select name="meat" id="meat" v-model="meat">
+            <select name="meat" id="meat" v-model="carne">
               <option value="">Selecione o tipo de carne:</option>
               <option v-for="carne in carnes" :key='carne.id' :value="carne.tipo">
                 {{carne.tipo}}
@@ -31,7 +31,7 @@
           <div id="optionals" class="input-container">
             <label id="optionals-title" for="optionals">Selecione as opcionais:</label>
             <div id="checkbox-container" v-for="opcionais in opcionais_data" :key="opcionais.id">
-              <input type="checkbox" name="salame" id="optionals" v-model="optionals" value="opcionais.tipo">
+              <input type="checkbox" name="opcionais" v-model="itens_opcionais" :value="opcionais.tipo">
               <span>{{ opcionais.tipo }}</span>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default {
      nome: null,
      pao: null,
      carne: null,
-     opcionais: [],
+     itens_opcionais: [],
      msg: null
     }
   },
@@ -72,7 +72,7 @@ export default {
 
       this.paes = data.paes;
       this.carnes = data.carnes;
-      this.opcionais_data = data.opcionais;
+      this.opcionais_data = data.itens_opcionais;
     },
 
     async createBurger(e){
@@ -83,7 +83,7 @@ export default {
         nome: this.nome,
         carne: this.carne,
         pao: this.pao,
-        opcionais: Array.from(this.opcionais),
+        opcionais: Array.from(this.itens_opcionais),
         status: "Solicitado"
       }
 
