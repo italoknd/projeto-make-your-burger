@@ -532,6 +532,40 @@
       ],
       "status": "Solicitado",
       "id": 39
+    },
+    {
+      "nome": "Italo de Paula Pedroza",
+      "carne": "Veggie burger",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 40
+    },
+    {
+      "nome": "Italo de Paula Pedroza",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 41
+    },
+    {
+      "nome": "Italo de Paula Pedroza",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 42
     }
   ]
 }
