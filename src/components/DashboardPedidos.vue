@@ -1,5 +1,6 @@
 <template>
   <div id="burger-table">
+    <PedidoConcluido :msg="msgPedido" v-show="msgPedido"/>
     <div id="burger-table-heading">
       <div class="order-id">#:</div>
       <div>Cliente:</div>
@@ -44,6 +45,8 @@
 </template>
 
 <script>
+import PedidoConcluido from '../components/PedidoConcluido.vue'
+
 export default {
   name: 'DashboardPedidos',
   data(){
@@ -51,6 +54,7 @@ export default {
       burgers: null,
       burger_id: null,
       stts: [],
+      msgPedido: null
     }
   },
   methods:{
@@ -65,6 +69,8 @@ export default {
       this.getStatus()
 
     },
+
+
     async getStatus(){
       const req = await fetch('http://localhost:3000/status')
 
@@ -72,6 +78,8 @@ export default {
 
       this.stts = status
     },
+
+
     async cancelarPedido(id){
       const req = await fetch(`http://localhost:3000/burgers/${id}`,{
         method: 'DELETE'
@@ -79,8 +87,18 @@ export default {
 
       const res = await req.json()
 
+      //colocar msg no sistema
+      this.msgPedido = `Pedido removido com sucesso!`
+
+      //limpar msg pós pedido feito
+      setTimeout(() => {
+        this.msgPedido = ""
+      }, 7000);
+
       this.getPedidos()
     },
+
+
     async atualizarStatus(event, id){
       const option = event.target.value
 
@@ -94,11 +112,23 @@ export default {
 
       const res = await req.json()
 
+      //colocar msg no sistema
+      res.status = res.status.toLocaleUpperCase()
+      this.msgPedido = `Pedido Nº ${res.id} foi atualizado para "${res.status}" com sucesso!`
+
+      //limpar msg pós pedido feito
+      setTimeout(() => {
+        this.msgPedido = ""
+      }, 7000);
+
       console.log(res);
     }
   },
   mounted(){
     this.getPedidos()
+  },
+  components:{
+    PedidoConcluido
   }
 }
 </script>
@@ -146,11 +176,12 @@ export default {
  button{
   background: #252525;
   color: #FCAC19;
-  padding: 10px 20px;
+  padding: 10px 22px;
   font-size: 1rem;
   font-weight: bold;
   border: 2px solid #252525;
   cursor: pointer;
+  margin-top: 10px;
   transition: .5s;
  }
 

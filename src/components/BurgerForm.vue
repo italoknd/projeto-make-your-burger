@@ -110,7 +110,7 @@ export default {
       //limpar msg pós pedido feito
       setTimeout(() => {
         this.msgPedido = ""
-      }, 10000);
+      }, 7000);
 
     }
   },

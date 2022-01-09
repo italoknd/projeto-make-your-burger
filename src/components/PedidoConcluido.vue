@@ -23,21 +23,26 @@ export default {
    margin: auto;
    max-width: 300px;
    margin-bottom: 30px;
-   animation: fadeOut 10s;
+   animation: fadeOut 7s;
  }
 
  @keyframes fadeOut {
    0%{
-     opacity: 1;
+    opacity: 1;
+    margin-bottom: 30px;
    }25%{
-     opacity: 1;
+    opacity: 1;
+    margin-bottom: 30px;
    }50%{
-     opacity: 1;
+    opacity: 1;
+    margin-bottom: 30px; 
    }75%{
-     opacity: 0;
+    opacity: 0;
+    margin-bottom: 30px;
    }100%{
-     opacity: 0;
-     margin-bottom: -60px;
+    opacity: 0;
+    margin-bottom: -60px; 
    }
  }
+
 </style>
