@@ -9,30 +9,34 @@
       <div>Ações:</div>
     </div>
     <div id="burger-table-rows">
-        <div class="burger-table-row">
+        <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
           <div class="order-number">
-            1
+            <strong>{{burger.id}}</strong>
           </div>
           <div>
-            Joao
+            {{burger.nome}}
           </div>
           <div>
-            Integral
+            {{burger.pao}}
           </div>
           <div>
-            maminha
+            {{burger.carne}}
           </div>
           <div>
             <ul>
-              <li>Salame</li>
-              <li>Tomate</li>
+              <li v-for="(opcional,index) in burger.opcionais" :key="index">
+                {{opcional}}
+              </li>
             </ul>
           </div>
           <div>
             <select name="stts" class="status">
-              <option value="">Solicitado</option>
+              <option value="">Selecione</option>
+              <option value="statusPedido.tipo" v-for="statusPedido in stts" :key="statusPedido.id" :selected="burger.status == statusPedido.tipo">
+                {{statusPedido.tipo}}
+              </option>
             </select>
-            <button>Cancelar</button>
+            <button @click="cancelarPedido(burger.id)">Cancelar</button>
           </div>
         </div>
       </div>
@@ -42,6 +46,45 @@
 <script>
 export default {
   name: 'DashboardPedidos',
+  data(){
+    return{
+      burgers: null,
+      burger_id: null,
+      stts: [],
+    }
+  },
+  methods:{
+    async getPedidos(){
+      const req = await fetch('http://localhost:3000/burgers')
+
+      const data = await req.json()
+
+      this.burgers = data
+
+      //resgatar os stts
+      this.getStatus()
+
+    },
+    async getStatus(){
+      const req = await fetch('http://localhost:3000/status')
+
+      const status = await req.json()
+
+      this.stts = status
+    },
+    async cancelarPedido(id){
+      const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+        method: 'DELETE'
+      })
+
+      const res = await req.json()
+
+      this.getPedidos()
+    }
+  },
+  mounted(){
+    this.getPedidos()
+  }
 }
 </script>
 
