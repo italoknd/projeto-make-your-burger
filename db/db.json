@@ -93,17 +93,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "Italo pedroza",
-      "carne": "Alcatra",
-      "pao": "Integral",
-      "opcionais": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    }
-  ]
+  "burgers": []
 }

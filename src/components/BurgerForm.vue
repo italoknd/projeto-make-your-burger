@@ -110,6 +110,7 @@ export default {
       //limpar msg pós pedido feito
       setTimeout(() => {
         this.msgPedido = ""
+        document.location.reload()
       }, 7000);
 
     }
