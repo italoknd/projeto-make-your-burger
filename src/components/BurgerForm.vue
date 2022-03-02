@@ -74,7 +74,7 @@ export default {
   methods:{
     async getIngredientes(){
 
-      const req = await fetch('http://localhost:3000/ingredientes');
+      const req = await fetch('https://api-make-your-burger.herokuapp.com/ingredientes');
       const data = await req.json();
 
       this.paes = data.paes;
@@ -96,7 +96,7 @@ export default {
 
       const dataJson = JSON.stringify(data) //convertendo o objeto data em texto (JSON p/ txt)
 
-      const req = await fetch('http://localhost:3000/burgers',{
+      const req = await fetch('https://api-make-your-burger.herokuapp.com/burgers',{
         method: 'POST',
         headers:{"Content-Type": "application/json"}, //comunicação com o JSON
         body: dataJson //enviando dados do dataJson como txt
