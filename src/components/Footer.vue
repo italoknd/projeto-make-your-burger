@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Created by <a href="#">Italo Pedroza</a> &copy; 2022.</p>
+    <p>Created by <a href="https://www.linkedin.com/in/italo-pedroza/" rel="next" target="_blank">Italo Pedroza</a> &copy; 2022.</p>
   </div>
 </template>
 

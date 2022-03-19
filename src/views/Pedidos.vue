@@ -7,6 +7,7 @@
 
 <script>
 import DashboardPedidos from '../components/DashboardPedidos.vue'
+import SemPedidos from '../components/SemPedidos.vue'
 
 export default {
   name: 'Pedidos',

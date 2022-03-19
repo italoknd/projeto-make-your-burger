@@ -41,11 +41,13 @@
           </div>
         </div>
       </div>
+      <SemPedidos v-if="burgers == 0"/>
   </div>
 </template>
 
 <script>
 import PedidoConcluido from '../components/PedidoConcluido.vue'
+import SemPedidos from '../components/SemPedidos.vue'
 
 export default {
   name: 'DashboardPedidos',
@@ -128,7 +130,8 @@ export default {
     this.getPedidos()
   },
   components:{
-    PedidoConcluido
+    PedidoConcluido,
+    SemPedidos
   }
 }
 </script>
