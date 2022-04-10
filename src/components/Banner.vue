@@ -46,7 +46,7 @@ export default {
 
 @media (max-width: 768px) {
   #main-banner {
-    background-position: center center;
+    background-position: -25.5em center;
   }
 
   #main-banner h1 {
