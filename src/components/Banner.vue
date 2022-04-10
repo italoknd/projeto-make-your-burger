@@ -34,15 +34,15 @@ export default {
 
 @media (max-width: 320px) {
   #main-banner {
-    background-position-x: -35em!important;
-    background-position-y: center
+    background-position-x: -35em !important;
+    background-position-y: center;
   }
 
   #main-banner h1 {
-    font-size: 1.25em;
+    font-size: 1.25em!important;
     padding: 15px;
-    margin-top: 26em!important;
-    margin-left: .2em!important;
+    margin-top: 26em !important;
+    margin-left: 0.2em !important;
   }
 }
 
@@ -52,9 +52,22 @@ export default {
   }
 
   #main-banner h1 {
-    font-size: 1.25em;
-    padding: .9em 2.5em;
+    font-size: 1.25em!important;
+    padding: 0.9em 2.5em;
     margin-top: -34.5em;
+  }
+}
+
+@media (min-width: 769px) {
+  #main-banner {
+    background-position: right center;
+  }
+
+  #main-banner h1 {
+    font-size: 1.5em;
+    padding: 0.9em 2.5em;
+    margin-left: 0.2em;
+    margin-top: -26.5em;
   }
 }
 </style>

@@ -250,7 +250,17 @@ select {
   }
 
   .submit-button {
-    min-width: 43vw;
+    min-width: 80%;
+    margin-bottom: 0.4em;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    margin-top: 0.4em;
+  }
+
+  .submit-button {
     margin-bottom: 0.4em;
   }
 }
