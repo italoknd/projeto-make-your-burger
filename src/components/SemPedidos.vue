@@ -13,7 +13,8 @@ export default {
 <style scoped>
   h2{
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
     animation: message 3s;
   }
 

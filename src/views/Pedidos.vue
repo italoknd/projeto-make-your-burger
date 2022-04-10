@@ -7,7 +7,6 @@
 
 <script>
 import DashboardPedidos from '../components/DashboardPedidos.vue'
-import SemPedidos from '../components/SemPedidos.vue'
 
 export default {
   name: 'Pedidos',
@@ -16,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  h1{
+    margin-top: .5em;
+  }
+</style>
