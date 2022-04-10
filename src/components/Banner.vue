@@ -41,19 +41,20 @@ export default {
   #main-banner h1 {
     font-size: 1.25em;
     padding: 15px;
+    margin-top: 26em!important;
+    margin-left: .2em!important;
   }
 }
 
 @media (max-width: 768px) {
   #main-banner {
-    background-position: right center;
+    background-position: -25.6em center;
   }
 
   #main-banner h1 {
     font-size: 1.25em;
-    padding: .9em 2.5em;;
-    margin-top: -26.5em;
-    margin-left: 6em;
+    padding: .9em 2.5em;
+    margin-top: -34.5em;
   }
 }
 </style>
