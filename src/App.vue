@@ -35,9 +35,4 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
 }
-
-/* .main-container{
-    margin: 50px;
-    min-height: 550px;
-  } */
 </style>

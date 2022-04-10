@@ -156,11 +156,6 @@ export default {
   max-width: 1000px;
   min-height: 60vh;
   margin: 0 auto;
-  overflow-x: scroll;
-}
-
-#burger-table::-webkit-scrollbar {
-  scrollbar-width: thin;
 }
 
 #burger-table-heading,
@@ -217,7 +212,12 @@ button:hover {
 
 @media (max-width: 585px) {
   #burger-table{
-    min-width: 400px;
+    max-width: 500px;
+    overflow-x: scroll;
   }
+
+  #burger-table::-webkit-scrollbar {
+  scrollbar-width: thin;
+}
 }
 </style>
