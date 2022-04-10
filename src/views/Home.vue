@@ -1,7 +1,11 @@
 <template>
-<Banner />
-  <div class="main-container">
-    <BurgerForm />
+  <div class="home">
+    <div class="banner">
+      <Banner />
+    </div>
+    <div class="main-container">
+      <BurgerForm />
+    </div>
   </div>
 </template>
 
@@ -11,9 +15,13 @@ import BurgerForm from '../components/BurgerForm.vue'
 
 export default {
   name: 'Home',
-  components:{
+  components: {
     Banner,
     BurgerForm
   }
 }
 </script>
+
+<style scoped>
+
+</style>
