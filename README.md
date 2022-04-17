@@ -5,12 +5,12 @@ Descrição (🇧🇷)
 
 Meu primeiro projeto utilizando Vue JS! A aplicação conta com duas áreas:
 
-##Home:
+## Home:
 A Home, onde o usuário pode preencher o seu nome e o montar o seu próprio burger tendo diversas opções de pão, carne e outros ingredientes opcionais
 ![image](https://user-images.githubusercontent.com/74671728/163704192-8f83a937-6ff8-47a1-b293-0c0c847073bb.png)
 
 
-##Pedidos:
+## Pedidos:
 e a área de Pedidos, onde é possível visualizar todos os pedidos realizados e realizar ações como: cancelar o pedido e trocar o status do mesmo
 ![image](https://user-images.githubusercontent.com/74671728/163704213-c67dde00-d406-42fe-9b80-bb185130402b.png)
 
@@ -25,11 +25,11 @@ Description (:us:)
 
 That's my first project with Vue JS. The application has two areas:
 
-##Home:
+## Home:
 This part is where the user can mount their own burger filling the camps with their name and choosing the ingredients to mount the burger
 ![image](https://user-images.githubusercontent.com/74671728/163704192-8f83a937-6ff8-47a1-b293-0c0c847073bb.png)
 
-##Requests:
+## Requests:
 This part is where we can see the requests made by the user and control some actions like: set the actual state of the request or even delete the request
 ![image](https://user-images.githubusercontent.com/74671728/163704213-c67dde00-d406-42fe-9b80-bb185130402b.png)
 
