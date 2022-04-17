@@ -2,7 +2,7 @@
 
 Descrição (🇧🇷)
 :-------------:
----
+***
 
 Meu primeiro projeto utilizando Vue JS! A aplicação conta com duas áreas:
 
