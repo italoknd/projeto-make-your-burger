@@ -1,4 +1,7 @@
-# projeto-make-your-burger
+# Projeto Make Your Burger
+
+Descrição (🇧🇷)
+:------------------------------------------------------------------------:
 
 Meu primeiro projeto utilizando Vue JS! A aplicação conta com duas áreas:
 
