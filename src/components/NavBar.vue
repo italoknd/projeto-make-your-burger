@@ -23,8 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /*position: sticky;
-    top: 0;*/
   }
 
   #nav #logo_url{
